@@ -40,10 +40,14 @@ import IconBox from "components/icons/IconBox";
 import React from "react";
 import {
   MdAddTask,
-  MdAttachMoney,
-  MdBarChart,
+  MdElectricBolt,
   MdFileCopy,
 } from "react-icons/md";
+import { GiReceiveMoney } from "react-icons/gi";
+import {
+  PiBatteryChargingFill,
+  PiBatteryFullFill,
+} from "react-icons/pi";
 import CheckTable from "views/admin/default/components/CheckTable";
 import ComplexTable from "views/admin/default/components/ComplexTable";
 import DailyTraffic from "views/admin/default/components/DailyTraffic";
@@ -75,12 +79,12 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdBarChart} color={brandColor} />
+                <Icon w='32px' h='32px' as={MdElectricBolt} color={brandColor} />
               }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='Generation'
+          value='68.82mWh'
         />
         <MiniStatistics
           startContent={
@@ -89,34 +93,27 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+                <Icon w='32px' h='32px' as={PiBatteryChargingFill} color={brandColor} />
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
+          name='Capacity'
+          value='2.097kW'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
+        <MiniStatistics growth='+23%' name='CO2 Saved' value='0.98kt' />
         <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
-              <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
-              </FormLabel>
-              <Select
-                id='balance'
-                variant='mini'
-                mt='5px'
-                me='0px'
-                defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
-              </Select>
-            </Flex>
+          startContent={
+            <IconBox
+              w='56px'
+              h='56px'
+              bg={boxBg}
+              icon={
+                <Icon w='32px' h='32px' as={PiBatteryChargingFill} color={brandColor} />
+              }
+            />
           }
-          name='Your balance'
-          value='$1,000'
+          name='Capacity'
+          value='2.097kW'
         />
         <MiniStatistics
           startContent={
@@ -124,11 +121,11 @@ export default function UserReports() {
               w='56px'
               h='56px'
               bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
-              icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
+              icon={<Icon w='28px' h='28px' as={GiReceiveMoney} color='white' />}
             />
           }
-          name='New Tasks'
-          value='154'
+          name='Savings'
+          value='Rs 23.4K'
         />
         <MiniStatistics
           startContent={
@@ -137,12 +134,12 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
+                <Icon w='32px' h='32px' as={PiBatteryFullFill} color={brandColor} />
               }
             />
           }
-          name='Total Projects'
-          value='2935'
+          name='Total Production'
+          value='2935mWh'
         />
       </SimpleGrid>
 
