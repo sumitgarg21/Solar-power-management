@@ -143,7 +143,7 @@ export default function HeaderLinks(props) {
               borderRadius="8px"
               mb="10px"
             >
-              <ItemContent info="Horizon UI Dashboard PRO" />
+              <ItemContent info="SolarFlow PRO" />
             </MenuItem>
             <MenuItem
               _hover={{ bg: 'none' }}
@@ -158,7 +158,7 @@ export default function HeaderLinks(props) {
         </MenuList>
       </Menu>
 
-      <Menu>
+      {/* <Menu>
         <MenuButton p="0px">
           <Icon
             mt="6px"
@@ -218,7 +218,7 @@ export default function HeaderLinks(props) {
             </Link>
           </Flex>
         </MenuList>
-      </Menu>
+      </Menu> */}
 
       <Button
         variant="no-hover"

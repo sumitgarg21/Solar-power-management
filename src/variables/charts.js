@@ -107,17 +107,17 @@ export const barChartOptionsDailyTraffic = {
 
 export const barChartDataConsumption = [
   {
-    name: "PRODUCT A",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+    name: "Grid Power",
+    data: [27.49, 39.01, 34.64, 31.97, 23.12, 21.16, 23.12],
   },
   {
-    name: "PRODUCT B",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+    name: "Solar Power",
+    data: [22.99, 19.02, 20.62, 10.31, 24.55, 22.49, 13.19],
   },
-  {
-    name: "PRODUCT C",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-  },
+  // {
+  //   name: "PRODUCT C",
+  //   data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+  // },
 ];
 
 export const barChartOptionsConsumption = {
@@ -141,7 +141,7 @@ export const barChartOptionsConsumption = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    categories: ["17", "18", "19", "20", "21", "22", "23"],
     show: false,
     labels: {
       show: true,
@@ -253,12 +253,8 @@ export const pieChartData = [63, 25, 12];
 
 export const lineChartDataTotalSpent = [
   {
-    name: "Revenue",
-    data: [50, 64, 48, 66, 49, 68],
-  },
-  {
-    name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
+    name: "Power",
+    data: [501, 553.2, 600, 589, 554, 602],
   },
 ];
 
@@ -296,7 +292,7 @@ export const lineChartOptionsTotalSpent = {
     theme: "dark",
   },
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   stroke: {
     curve: "smooth",
@@ -304,7 +300,7 @@ export const lineChartOptionsTotalSpent = {
   },
   xaxis: {
     type: "numeric",
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["APR", "MAY", "JUN", "JUL", "AUG", "SEP"],
     labels: {
       style: {
         colors: "#A3AED0",
@@ -316,11 +312,24 @@ export const lineChartOptionsTotalSpent = {
       show: false,
     },
     axisTicks: {
-      show: false,
+      show: true,
     },
   },
   yaxis: {
-    show: false,
+    show: false, // Display the y-axis
+    min: 0, // Start at 0
+    max: 1000, // Maximum value for the y-axis
+    tickAmount: 12, // Number of intervals on the y-axis
+    labels: {
+      style: {
+        colors: "#A3AED0",
+        fontSize: "12px",
+        fontWeight: "500",
+      },
+      formatter: function (value) {
+        return value.toFixed(0); // Ensure values are shown as whole numbers
+      },
+    },
   },
   legend: {
     show: false,

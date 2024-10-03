@@ -142,9 +142,9 @@ export default function CheckTable(props) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Check Table
+          Energy Production
         </Text>
-        <Menu />
+        {/* <Menu /> */}
       </Flex>
       <Box>
         <Table variant="simple" color="gray.500" mb="24px" mt="12px">

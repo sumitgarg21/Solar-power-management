@@ -144,7 +144,7 @@ export default function CheckTable(props) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Check Table
+          Energy Production
         </Text>
         <Menu />
       </Flex>
